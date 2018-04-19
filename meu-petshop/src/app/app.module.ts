@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { TopoComponent } from './topo/topo.component';
+import { NossaHistoriaComponent } from './nossa-historia/nossa-historia.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    TopoComponent
+    TopoComponent,
+    NossaHistoriaComponent,
   ],
   imports: [
     BrowserModule
