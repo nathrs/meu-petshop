@@ -1,18 +1,47 @@
-
-    <div class="item">
-        <div style="position:top; top:300px; left:10px; nav-down:300px">
-        <img class="img-responsive"  src="../../assets/cachorro-aviador-wallpaper.jpg" alt="Nossa Hitória">
-        <div class="carousel-caption">          
-  <div class="col-md-6 px-0">
-    <h1 class="display-8 font-italic">Nossa História</h1>    
-      <p class="lead my-3">Mussum Ipsum, cacilds vidis litro abertis. Delegadis gente finis, bibendum egestas augue arcu ut est. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis. Mé faiz elementum girarzis, nisi eros vermeio.
-
-          Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl. Aenean aliquam molestie leo, vitae iaculis nisl. Viva Forevis aptent taciti sociosqu ad litora torquent. Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis.
-      </p>
-        <p class="lead mb-3"><a href="#" class="text-white font-weight-bold">Continue reading...</a>
+<div class="item">
+  <div style="position:absolute;">
+    <img class="tamanho" src="../../assets/cachorro-aviador-wallpaper.jpg" alt="Hitória">
+    <div class="cor" *ngIf="exibeHistoria; else nossaHistoria">
+      <div class="carousel-caption">
+        <h1 class="display-8 font-italic">Nossa História</h1>
+        <p class="lead my-3 font-weight-bold">Mussum Ipsum, cacilds vidis litro abertis. Delegadis gente finis, bibendum egestas augue arcu ut est. Posuere libero
+          varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Interessantiss quisso pudia ce receita de
+          bolis, mais bolis eu num gostis. Mé faiz elementum girarzis, nisi eros vermeio. Mauris nec dolor in eros commodo
+          tempor. Aenean aliquam molestie leo, vitae iaculis nisl. Aenean aliquam molestie leo, vitae iaculis nisl. Viva
+          Forevis aptent taciti sociosqu ad litora torquent. Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis,
+          aguis e fermentis. Mussum Ipsum, cacilds vidis litro abertis. Delegadis gente finis, bibendum egestas augue arcu
+          ut est. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Interessantiss quisso
+          pudia ce receita de bolis, mais bolis eu num gostis. Mé faiz elementum girarzis, nisi eros vermeio. Mauris nec
+          dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl. Aenean aliquam molestie leo, vitae
+          iaculis nisl. Viva Forevis aptent taciti sociosqu ad litora torquent. Suco de cevadiss, é um leite divinis, qui
+          tem lupuliz, matis, aguis e fermentis. Mussum Ipsum, cacilds vidis litro abertis. Delegadis gente finis, bibendum
+          egestas augue arcu ut est. Posuere libero varius.
         </p>
-        </div>
+        <p class="lead mb-3">
+          <button (click)="lerMais()" type="button" class="btn btn-dark">Leia Mais</button>
+        </p>
       </div>
     </div>
   </div>
+</div>
 
+<ng-template #nossaHistoria>
+  <div class="item">
+    <div class= "corVoltar">
+      <div class="row">
+        <div class="col-md-12">
+            <div class="carousel-caption">
+            <h1 class="display-4-bold">Quando tudo começou</h1>
+            <p class="lead my-3 font-weight-bold">Suspendisse molestie laoreet condimentum. Etiam viverra diam elit. Nam luctus gravida mattis. Maecenas et eros sed nisl dictum rhoncus et at velit. Mauris auctor convallis odio. In euismod diam non massa sodales finibus. Nunc molestie, sem tempus convallis ornare, velit elit tincidunt eros, et convallis felis massa a metus. Curabitur id augue pharetra, porta dolor nec, ornare nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+                Curabitur ullamcorper neque a ullamcorper elementum. Vivamus tristique laoreet purus et pellentesque. Suspendisse a urna in ex tincidunt interdum. Mauris ac rutrum ligula, ut efficitur neque. Sed vestibulum nisl in tristique efficitur. Nulla sodales feugiat turpis, sit amet lacinia neque tempor vitae. Vivamus nisi elit, elementum eu justo at, dignissim blandit tellus. Vivamus convallis justo nec mi tincidunt, ut pharetra sem egestas. Fusce nec libero bibendum, egestas mauris ac, aliquam eros. In tempus risus at est lacinia, ac aliquet justo condimentum. Sed ac risus lacinia, commodo leo id, tincidunt libero. Donec et lectus est. Nam quam tortor, maximus in nunc tincidunt, lobortis iaculis mi. Curabitur vehicula nisl in metus consequat convallis. Suspendisse quis faucibus ex.</p>
+            <hr class="my-4">
+            <button (click)="voltar()" type="button" class="btn btn-dark">Voltar</button>
+      </div>
+        </div>
+    </div>
+  </div>
+    <div class="row">
+    </div>
+  </div>
+</ng-template>
